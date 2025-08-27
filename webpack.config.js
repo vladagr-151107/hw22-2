@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: "bundle.js",
+    filename: "bundle[fullhash].js",
     clean: true
   },
   mode: 'development',
@@ -16,7 +16,7 @@ module.exports = {
       template: './src/index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: "styles.css"
+      filename: "styles[fullhash].css"
     })
   ],
   module: {
